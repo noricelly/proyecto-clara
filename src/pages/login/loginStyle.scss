@@ -1,20 +1,34 @@
 @import '.././../assets/styles/variables.scss';
 @import '.././../assets/styles/reset.scss';
 
-#main {
+.mainLogin {
   background-image: url('../../assets/bg-mobilel.svg');
 
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: $font-monserrat;
 }
 
 .boton{
   background-color: $orange !important;
-  color: red;
+
 }
 .border{
   border-radius: 40px !important;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80% !important;
+  ;
+
 }
 .mainLogin{
-  
+ // padding-top: 200px;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
