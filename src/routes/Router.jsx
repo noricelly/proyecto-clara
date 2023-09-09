@@ -9,7 +9,7 @@ import ClientRoutes from "./PrivateRoutes/ClientRoutes";
 import PublicRoute from "./PublicRoutes/PublicRoute";
 
 const Router = () => {
-  const  userRole  = true;
+  const  userRole  = false;
 
 
   return (
