@@ -1,0 +1,92 @@
+@import '.././../assets/styles/variables.scss';
+@import '.././../assets/styles/reset.scss';
+
+body {
+  background-image: url('../../assets/bg-mobile.svg');
+}
+
+/* Contenedor principal */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Registro de formulario */
+form {
+  max-width: 100%;
+  padding: 20px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+/* Estilos para los errores */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Estilos para el botón de enviar */
+button {
+  width: 80%;
+  background-color: $orange; /* Asegúrate de que $orange esté definido en tus variables */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+}
+
+/* Consulta de medios para la vista móvil */
+@media (max-width: 420px) {
+  #container {
+    border-radius: 0; /* Elimina los bordes redondeados en dispositivos móviles si lo deseas */
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  div {
+    margin-bottom: 10px;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      padding: 8px;
+    }
+  }
+
+  .error {
+    font-size: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
+.boder{
+  border-radius: 40px;
+}

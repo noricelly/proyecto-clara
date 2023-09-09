@@ -1,39 +1,44 @@
-import React from 'react';
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import './registerStyle.scss'
+
 const validationSchema = Yup.object({
-    nombres: Yup.string().required('El campo Nombres es requerido'),
-    apellidos: Yup.string().required('El campo Apellidos es requerido'),
-    poblacion: Yup.string().required('El campo Población es requerido'),
-    genero: Yup.string().required('El campo Género es requerido'),
-    correo: Yup.string()
-      .email('Ingrese un correo válido')
-      .required('El campo Correo es requerido'),
-    password: Yup.string()
-      .min(8, 'La contraseña debe tener al menos 8 caracteres')
-      .required('El campo Contraseña es requerido'),
+  nombres: Yup.string().required('El campo Nombres es requerido'),
+  apellidos: Yup.string().required('El campo Apellidos es requerido'),
+  poblacion: Yup.string().required('El campo Población es requerido'),
+  genero: Yup.string().required('El campo Género es requerido'),
+  correo: Yup.string()
+    .email('Ingrese un correo válido')
+    .required('El campo Correo es requerido'),
+  password: Yup.string()
+    .min(8, 'La contraseña debe tener al menos 8 caracteres')
+    .required('El campo Contraseña es requerido'),
+});
+
+const Register = () => {
+  const formik = useFormik({
+    initialValues: {
+      nombres: '',
+      apellidos: '',
+      poblacion: '',
+      genero: '',
+      correo: '',
+      password: '',
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      // Aquí puedes manejar la lógica para enviar los datos del formulario
+      console.log(values);
+    },
   });
 
-export const Register = () => {
-    const formik = useFormik({
-        initialValues: {
-          nombres: '',
-          apellidos: '',
-          poblacion: '',
-          genero: '',
-          correo: '',
-          password: '',
-        },
-        validationSchema,
-        onSubmit: (values) => {
-          // Aquí puedes manejar la lógica para enviar los datos del formulario
-          console.log(values);
-        },
-      });
-    
-      return (
-        <div>
+  return (
+    <div id='register'>
+      <div className="card m-5 boder">
+        <div className="card-body">
           <h1>Formulario</h1>
+
           <form onSubmit={formik.handleSubmit}>
             <div>
               <label htmlFor="nombres">Nombres</label>
@@ -49,7 +54,7 @@ export const Register = () => {
                 <div className="error">{formik.errors.nombres}</div>
               ) : null}
             </div>
-    
+
             <div>
               <label htmlFor="apellidos">Apellidos</label>
               <input
@@ -64,7 +69,7 @@ export const Register = () => {
                 <div className="error">{formik.errors.apellidos}</div>
               ) : null}
             </div>
-    
+
             <div>
               <label htmlFor="poblacion">Población</label>
               <select
@@ -82,7 +87,7 @@ export const Register = () => {
                 <div className="error">{formik.errors.poblacion}</div>
               ) : null}
             </div>
-    
+
             <div>
               <label htmlFor="genero">Género</label>
               <input
@@ -97,7 +102,7 @@ export const Register = () => {
                 <div className="error">{formik.errors.genero}</div>
               ) : null}
             </div>
-    
+
             <div>
               <label htmlFor="correo">Correo</label>
               <input
@@ -112,7 +117,7 @@ export const Register = () => {
                 <div className="error">{formik.errors.correo}</div>
               ) : null}
             </div>
-    
+
             <div>
               <label htmlFor="password">Contraseña</label>
               <input
@@ -127,9 +132,13 @@ export const Register = () => {
                 <div className="error">{formik.errors.password}</div>
               ) : null}
             </div>
-    
-            <button type="submit">Enviar</button>
+
+            <button type="submit">Continuar</button>
           </form>
         </div>
-      );
+      </div>
+
+    </div>
+  );
 }
+export default Register
