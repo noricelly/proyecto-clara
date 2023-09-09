@@ -1,6 +1,10 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import {getStorage} from "firebase/storage"
+
 const firebaseConfig = {
   apiKey: "AIzaSyCyHpqhpvTHbFbbAE50k9f3pxTmSo8YXcs",
   authDomain: "reto-bienestar.firebaseapp.com",
@@ -12,10 +16,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore()
-
-export {
-    app,
-    db
-}
+export const firebaseApp = initializeApp(firebaseConfig);
+export const firebaseAuth = getAuth(firebaseApp);
+export const firebaseDB = getFirestore(firebaseApp)
+export const firebaseStorage = getStorage(firebaseApp)
+export const analytics = getAnalytics(firebaseApp);

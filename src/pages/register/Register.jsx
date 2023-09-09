@@ -17,6 +17,8 @@ const validationSchema = Yup.object({
 });
 
 const Register = () => {
+
+  
   const formik = useFormik({
     initialValues: {
       nombres: '',
@@ -36,13 +38,14 @@ const Register = () => {
   return (
     <div id='register'>
       <div className="card m-5 boder">
-        <div className="card-body">
+        <div className="card-body ">
           <h1>Formulario</h1>
 
           <form onSubmit={formik.handleSubmit}>
             <div>
               <label htmlFor="nombres">Nombres</label>
               <input
+              className='input'
                 type="text"
                 id="nombres"
                 name="nombres"
