@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/login/Login";
@@ -11,7 +11,6 @@ import Content from "../pages/Content/Content";
 
 const Router = () => {
   const  userRole  = false;
-
 
   return (
     <BrowserRouter>

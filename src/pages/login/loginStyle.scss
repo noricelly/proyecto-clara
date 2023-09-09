@@ -1,0 +1,20 @@
+@import '.././../assets/styles/variables.scss';
+@import '.././../assets/styles/reset.scss';
+
+#main {
+  background-image: url('../../assets/bg-mobilel.svg');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.boton{
+  background-color: $orange !important;
+  color: red;
+}
+.border{
+  border-radius: 40px !important;
+}
+.mainLogin{
+  
+}
