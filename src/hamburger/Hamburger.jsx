@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import './hamburger.scss';
 import Swal from "sweetalert2";
-
-const Hamburger =  () => {
-
+import { useNavigate } from 'react-router-dom';
+const Hamburger =  ({setUserRole}) => {
+const navegate = useNavigate()
   const form = async() => {
     const { value: formValues } = await Swal.fire({
       title: 'Encuesta de población',
@@ -40,6 +40,26 @@ const Hamburger =  () => {
             setOpenMenu(false)
         }
     }
+    const handleCerrar= ()=>{
+    
+      Swal.fire({
+        title: '¿Cerrar Sesión?',
+        text: '¿Estás seguro de que deseas cerrar sesión?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, cerrar sesión',
+        cancelButtonText: 'Cancelar',
+      }).then((result) => {
+        if (result.isConfirmed) {
+
+          Swal.fire('¡Cerrado!', 'Has cerrado sesión exitosamente.', 'success');
+          setUserRole(false)
+          navegate("/")
+        }
+      });
+    }
     return (
         <>
             <img src='/Images/Register/hamburger.jpeg' alt="rhery" onClick={handleMenu} className="hamburger" />
@@ -49,7 +69,7 @@ const Hamburger =  () => {
                      <a href="https://calendly.com/nory1291">Agende su cita</a>
                     <a href="https://wa.me/+573043668692/">Botón de pánico</a>
                     <span onClick={form}>¿Quieres ayudarnos?</span>
-                    <button>Cerrar sesión</button>
+                    <button onClick={handleCerrar} className="btn btn-">Cerrar sesión</button>
                     
                 </section>
             }

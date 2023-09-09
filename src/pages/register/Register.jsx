@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './registerStyle.scss'
 import { useNavigate } from 'react-router-dom';
-
+import Swal from "sweetalert2";
 const validationSchema = Yup.object({
   nombres: Yup.string().required('El campo Nombres es requerido'),
   apellidos: Yup.string().required('El campo Apellidos es requerido'),
@@ -33,6 +33,13 @@ const Register = () => {
     onSubmit: (values) => {
       // Aquí puedes manejar la lógica para enviar los datos del formulario
       console.log(values);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Usuario Registrado Exitosamente',
+        showConfirmButton: false,
+        timer: 2500
+      })
       navegate("/user")
     },
   });

@@ -3,9 +3,9 @@ import * as Yup from 'yup';
 //import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import './loginStyle.scss'
 import { useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2";
 
-
-const Login = () => {
+const Login = ({setUserRole}) => {
   const navegate = useNavigate()
   const validationSchema = Yup.object().shape({
     username: Yup.string().required('El nombre de usuario es obligatorio'),
@@ -16,6 +16,30 @@ const Login = () => {
     try {
       //await signInWithEmailAndPassword(auth, values.username, values.password);
       //alert("login exitoso")
+      setUserRole(true)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: '¡Bienvenido!',
+        text: 'Has iniciado sesión correctamente en Clara. ¡Disfruta de tu experiencia!',
+        showConfirmButton: false,
+        timer: 3000, // La notificación se mostrará durante 5 segundos
+        background: '#fff', // Color de fondo
+        customClass: {
+          title: 'custom-title', // Clase CSS personalizada para el título
+          content: 'custom-content' // Clase CSS personalizada para el contenido
+        },
+        showClass: {
+          popup: 'animated fadeInDown faster' // Animación de entrada
+        },
+        hideClass: {
+          popup: 'animated fadeOutUp faster' // Animación de salida
+        },
+        onConfirm: () => {
+          // Tu código personalizado aquí cuando el usuario confirma
+        }
+      });
+      
       navegate("/user")
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
