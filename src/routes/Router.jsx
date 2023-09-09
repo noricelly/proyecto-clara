@@ -7,9 +7,10 @@ import UserFeed from "../pages/userFeed/UserFeed";
 import LandingPage from "../pages/landingPage/LandingPage";
 import ClientRoutes from "./PrivateRoutes/ClientRoutes";
 import PublicRoute from "./PublicRoutes/PublicRoute";
+import Content from "../pages/Content/Content";
 
 const Router = () => {
-  const  userRole  = false;
+  const  userRole  = true;
 
 
   return (
@@ -19,9 +20,12 @@ const Router = () => {
           <Route index path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
         </Route>
         <Route element={<ClientRoutes userRole={userRole} />}>
           <Route path="/user" element={<UserFeed />} />
+          <Route path="/content" element={<Content />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
