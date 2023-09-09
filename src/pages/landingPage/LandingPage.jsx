@@ -34,14 +34,14 @@ const LandingPage = () => {
         </section>
         <section className="landingPage__main__recognition">
           <h2>Conecta con tu mundo interior</h2>
-          <p>Ejercicio Mindfulness</p>
+          <span>Ejercicio de reconocimiento</span>
         </section>
         <section className="landingPage__main__healthy">
           <h3>¿Sentiste alguno de los siguientes sintomas?</h3>
           <article  className="landingPage__main__healthy__sintoma">
             <h4>¿Tienes mucho calor?</h4>
             <figure>
-              <img src="" alt="calorExcesivo" />
+              <img src="/Images/sintomas/calor.jpg" alt="calorExcesivo" />
             </figure>
           </article>
           <article className="landingPage__main__healthy__sintoma">

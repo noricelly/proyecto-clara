@@ -86,6 +86,14 @@
    &__recognition{
     border-top: 1px solid #D1D1D1;
     padding-top: 20px;
+    &> span{
+        font-size: calc(12px + 0.5vw);
+        border-radius: 10px;
+        border: 1px solid #1caca5;
+        background:  #fff;
+        color: #1caca5;
+        padding: 5px 10px;
+    }
     &> p{
         padding: 5px 20px;
         font-size: calc(10px + 0.5vw);
@@ -110,7 +118,7 @@
         margin-bottom: 40px;
        // width: 90px;
         padding: 5px 10px;
-        width: 120px;
+        width: 150px;
         &:hover {
           background: #fff;
           color: #000;
@@ -134,9 +142,10 @@
         align-items: center;
         border-radius: 5px;
         width: 200px;
-      
+        border: 1px solid #D1D1D1;
+        border-radius: 5px;
         &> h4{
-
+            font-weight: 400;
         }
         &> figure{
             height: 150px;
