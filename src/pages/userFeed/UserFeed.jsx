@@ -1,8 +1,9 @@
 import React from 'react'
+import Hamburger from "../../hamburger/Hamburger.jsx"
 
 const UserFeed = () => {
   return (
-    <div>UserFeed</div>
+    <><Hamburger/></>
   )
 }
 
