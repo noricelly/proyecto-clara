@@ -16,8 +16,8 @@ import './ContentCards.scss';
 </div>
 <div className='contentCard__content'>
     <h2>{content.title}</h2>
-    <a href={content.link}>Contenido Multimedia</a>
     <p>{content.content}</p>
+    <a href={content.link}>Contenido Multimedia</a>
     <div>
         
     </div>

@@ -10,7 +10,7 @@ import PublicRoute from "./PublicRoutes/PublicRoute";
 import Content from "../pages/Content/Content";
 
 const Router = () => {
-  const  userRole  = true;
+  const  userRole  = false;
 
   return (
     <BrowserRouter>

@@ -47,7 +47,7 @@ const Hamburger =  () => {
                 openMenu &&
                 <section className="menu">
                      <a href="https://calendly.com/nory1291">Agende su cita</a>
-                    <a href="https://wa.me/+573043668692/">Botón de pánico</a>
+                     <a href="https://wa.me/+573043668692?text=Hola%2C%20necesito%20ayuda">¡Tengo una emergencia!</a>
                     <span onClick={form}>¿Quieres ayudarnos?</span>
                     <button>Cerrar sesión</button>
                     

@@ -1,10 +1,35 @@
+@import "../assets/styles/variables.scss";
+
+
 .hamburger{
     width: 40px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
 }
 
 .menu{
+    font-family: $font-monserrat;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
+    position: absolute;
+    height: 300px;
+    width: 280px;
+    top: 0;
+    background-color: $light-azure-blue;
+    padding-top: 50px;
+    &> a, span{
+        padding: 0 40px;
+    }
+    &> button{
+        font-size: calc(12px + 0.5vw);
+        margin: 0 30px;
+        border-radius: 10px;
+        border: 1px solid #1caca5;
+        background: #1caca5;
+        color: #fff;
+       // width: 90px;
+        padding: 5px 10px;
+    }
 }
