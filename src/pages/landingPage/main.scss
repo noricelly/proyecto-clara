@@ -121,6 +121,34 @@
         padding: 10px 22px;
     }
    }
+   &__healthy{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__sintoma{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        width: 200px;
+      
+        &> h4{
+
+        }
+        &> figure{
+            height: 150px;
+            width: 200px;
+            &> img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+   }
  }
 
 }

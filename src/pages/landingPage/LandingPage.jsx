@@ -38,16 +38,16 @@ const LandingPage = () => {
         </section>
         <section className="landingPage__main__healthy">
           <h3>¿Sentiste alguno de los siguientes sintomas?</h3>
-          <article>
+          <article  className="landingPage__main__healthy__sintoma">
             <h4>¿Tienes mucho calor?</h4>
             <figure>
               <img src="" alt="calorExcesivo" />
             </figure>
           </article>
-          <article>
+          <article className="landingPage__main__healthy__sintoma">
             <h4>¿Tiemblas bastante?</h4>
             <figure>
-              <img src="" alt="Temblor" />
+              <img src="/Images/sintomas/temblor.jpg" alt="Temblor" />
             </figure>
           </article>
         </section>
